@@ -36,6 +36,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="dark"
+					enableSystem
+					disableTransitionOnChange
+				>
         {children}
         <TanStackDevtools
           config={{
@@ -48,6 +54,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             },
           ]}
         />
+				</ThemeProvider>
         <Scripts />
       </body>
     </html>
