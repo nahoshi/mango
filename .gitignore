@@ -10,7 +10,8 @@ count.txt
 .wrangler
 .output
 .vinxi
-todos.json
+
+src/types/mangadex.ts
 
 # Local Netlify folder
 .netlify

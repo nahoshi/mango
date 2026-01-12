@@ -3,13 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "bun run mangadex:generate; vite dev --port 3000",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "format": "biome format",
     "lint": "biome lint",
-    "check": "biome check"
+    "check": "biome check",
+    "mangadex:generate": "bunx openapi-typescript https://api.mangadex.org/docs/static/api.yaml -o ./src/types/mangadex.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
